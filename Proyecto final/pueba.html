@@ -1,0 +1,39 @@
+html>
+ <head>
+     <title>integral_definida</title>
+     <script >
+        function calcular()       
+         {        fx=document.funcion[0].value;
+                   a=eval(document.funcion[1].value);
+                   b=eval(document.funcion[2].value);
+                   n=parseInt(document.funcion[3].value); 
+                   sfx=document.funcion[4].value;
+                   dx=(b-a)/n ;si=0;sd=0;
+          for(i=0 ; i <n; i++)
+            {   x=a+i*dx ;fi=eval(fx);si=si+fi*dx;
+                 x=a+(i+1)*dx ;fd=eval(fx);sd=sd+fd*dx       }  
+                 document.funcion[6].value=si; 
+                 document.funcion[7].value=sd;
+                 document.funcion[8].value=dx;
+                 x=a;sfa=eval(sfx);x=b;sfb=eval(sfx);
+                 document.funcion[9].value=sfb-sfa;
+        }
+      </script>
+  </head>
+ 
+<body bgcolor=green>
+Integral definida de una función f(x) en un intervalo [a,b].<HR>
+  <form name="funcion">
+      Introduce la función f(x) = <input type="text" size=25><BR>
+      Introduce los extremos del intervalo....a=<input type="text" size=3>
+      b=<input type="text" size=3><BR>
+      Introduce el número de intervalos.......n=<input type="text" size=3><BR>
+      Introduce la función integral sf(x)=<input type="text" size=25>
+      <input type="button" value="Calcular" OnClick="calcular()"><HR>
+     Aproximación izq........=<input type="text" size=5><BR>
+     Aproximación dcha.....=<input type="text" size=5>
+     Amplitud de los intervalos dx=<input type="text" size=5><BR>
+     Regla de Barrow.........=<input type="text" size=5>
+   </form>
+</body>
+</html>

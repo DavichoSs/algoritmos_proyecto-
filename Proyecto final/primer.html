@@ -1,0 +1,51 @@
+<html>
+<head>
+  
+  <title>ALGORITMOS FUNDAMENTALES</title>
+  <script>
+    function hacer_click()
+	{
+		alert("Me haz dado un click");
+	}
+	function areao()  {
+var length = prompt ("Introduce la longitud")
+var altura = prompt ("Introduce la altura")
+var pi = 3.14159
+var sum = (pi*length)/altura
+alert("El área es "+sum+"")
+	}
+	function horner(){
+		var i, n;
+    	var a=[1,2,1];    //ingresa el polinomio
+    	var b=[],x;
+    	b=new double[a.length];
+    	n=a.length-1;
+    	x=2;
+    	b[n]=a[n];
+    	for(i=n-1;i>=0;i--){
+	        b[i]=a[i]+b[i+1]*x;            
+    	}
+		alert("P(2)= "+b[0]);		
+	}
+    
+</script>
+<meta content="Microsoft FrontPage 5.0" name="GENERATOR">
+</head>
+</b>
+<body>
+  
+</p>
+  <form>
+	  
+    <p align="center"><font face="Verdana Ref" size="5">ESCUELA POLITECNICA NACIONAL<br>
+    <input type="button" value="horner" onclick="horner()"/>
+  
+  </font>
+  <p><b><font face="Verdana Ref" size="2"><br>
+</form>
+<p><u><font face="Verdana Ref" size="2"><a href="primer.html">REGLA</a></font></u><font face="Verdana Ref" size="2"><u><br>
+<br></font></p>
+
+</body>
+
+</html>
